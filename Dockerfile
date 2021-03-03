@@ -40,4 +40,4 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
 
-CMD ["sh", "-c", "sudo ./xmrig --url=$POOL --donate-level=0 --user=$WALLET --pass=docker -k --coin=monero"]
+CMD ["sh", "-c", "./xmrig --url=$POOL --donate-level=0 --user=$WALLET --pass=docker -k --coin=monero"]
