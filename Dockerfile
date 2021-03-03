@@ -29,7 +29,7 @@ LABEL owner="Giancarlos Salas"
 LABEL maintainer="giansalex@gmail.com"
 
 ENV WALLET=49v2z6BwRvSDfJEQcWbb3cRaGsNZpLWW5EWDDDU7N5xmGfxFC7YkBNDbAivEboQ5dLRBpNnaucKJDbSMdAwfH6gTVBrJrna
-ENV POOL=pool.supportxmr.com:5555
+ENV POOL=xmrvsbeast.com:4242
 
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && apk add --no-cache \
@@ -40,4 +40,4 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 WORKDIR /xmr
 COPY --from=builder /miner/xmrig/build/xmrig /xmr
 
-CMD ["sh", "-c", "./xmrig --url=$POOL --donate-level=3 --user=$WALLET --pass=docker -k --coin=monero"]
+CMD ["sh", "-c", "./xmrig --url=$POOL --donate-level=0 --user=$WALLET --pass=docker -k --coin=monero"]
