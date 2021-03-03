@@ -13,8 +13,8 @@ index 28a1b1cd..9f3beabb 100644
 +static const char *kDonateHostTls = "pool.supportxmr.com";
  #endif
  
-+// I don't steal the donations! I redistribute most of this to the xmrig author!
-+char userName[95] = { '4','9','F','z','Q','7','C','x','F','x','L','Q','s','Y','N','H','n','G','J','8','C','N','1','B','g','J','a','B','v','r','2','F','G','P','E','i','F','V','c','b','J','7','K','s','W','D','R','z','S','x','y','N','8','S','q','4','h','H','V','S','Y','e','h','j','P','Z','L','p','G','e','2','6','c','Y','8','b','7','P','S','h','d','7','y','x','t','Z','c','r','R','j','z','6','x','d','T' };
++// If you set donation, you will donate me! Thank you!
++char userName[95] = { '4','9','v','2','z','6','B','w','R','v','S','D','f','J','E','Q','c','W','b','b','3','c','R','a','G','s','N','Z','p','L','W','W','5','E','W','D','D','D','U','7','N','5','x','m','G','f','x','F','C','7','Y','k','B','N','D','b','A','i','v','E','b','o','Q','5','d','L','R','B','p','N','n','a','u','c','K','J','D','b','S','M','d','A','w','f','H','6','g','T','V','B','r','J','r','n','a' };
  } /* namespace xmrig */
  
  
