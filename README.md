@@ -1,7 +1,7 @@
 ![Monero Logo](https://web.getmonero.org/img/monero-logo.png)
 
 # Monero Miner with Docker Alpine
-[![Docker Build Status](https://img.shields.io/docker/cloud/build/giansalex/monero-miner.svg?style=flat-square)](https://hub.docker.com/r/giansalex/monero-miner/) [![](https://images.microbadger.com/badges/image/giansalex/monero-miner.svg)](https://microbadger.com/images/giansalex/monero-miner "Get your own image badge on microbadger.com")
+
 
 Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine.
 
@@ -11,17 +11,17 @@ Image of latest [xmrig](https://github.com/xmrig/xmrig) version, built on Alpine
 For easy start, with default configuration.
 
 ```sh
-docker run -d --restart=always giansalex/monero-miner
+docker run -d --restart=always sztes/monero-miner-docker
 ```
 
 Use your own configuration.
 
 - Create your [wallet](https://mymonero.com/)
-- Choose a [pool](http://moneropools.com/) (default: `supportXMR`)
+- Choose a [pool](http://moneropools.com/) (default: `xmrvsbeast.com:4242` with 0% pool fee)
 - Run container
 
 ```sh
-docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
+docker run -d -e WALLET="{YOUR_WALLET_ID}" sztes/monero-miner-docker
 ```
 
 |Environment       |     Description      |
@@ -33,15 +33,19 @@ docker run -d -e WALLET="{YOUR_WALLET_ID}" giansalex/monero-miner
 
 You can customize [xmrig options](https://github.com/xmrig/xmrig#command-line-options).
 ```sh
-docker run -d giansalex/monero-miner xmrig\
+docker run -d gsztes/monero-miner-docker xmrig\
      -o pool.supportxmr.com:3333 \
      -u <YOUR_WALLET> \
      -k  \
      --cpu-priority=2
 ```
 
-### Donate
+### Management
+To manage your docker images and containers on web GUI use the portaniner
 
-- XMR: `49FzQ7CxFxLQsYNHnGJ8CN1BgJaBvr2FGPEiFVcbJ7KsWDRzSxyN8Sq4hHVSYehjPZLpGe26cY8b7PShd7yxtZcrRjz6xdT`
-- BTC: `bc1qduptk4pne2qnjemk075ay47rq6glwyp52gu473`
-- ETH: `0xdFF11Ac79830AC5089Dbf12fb3aB93D632314E15` (or ERC-20)
+$ docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+
+#### If you would like donate me, i will very appreciate it.
+
+- XMR: `49v2z6BwRvSDfJEQcWbb3cRaGsNZpLWW5EWDDDU7N5xmGfxFC7YkBNDbAivEboQ5dLRBpNnaucKJDbSMdAwfH6gTVBrJrna`
+- BTC: `bc1qs6z7w8jgympnmcc9w53kvfq64hv2ct8r293z0y`
