@@ -33,7 +33,7 @@ docker run -d -e WALLET="{YOUR_WALLET_ID}" sztes/monero-miner-docker
 
 You can customize [xmrig options](https://github.com/xmrig/xmrig#command-line-options).
 ```sh
-docker run -d gsztes/monero-miner-docker xmrig\
+docker run -d sztes/monero-miner-docker xmrig\
      -o pool.supportxmr.com:3333 \
      -u <YOUR_WALLET> \
      -k  \
