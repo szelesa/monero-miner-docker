@@ -25,8 +25,6 @@ RUN cd xmrig/build && \
 
 
 FROM alpine:3.13
-LABEL owner="Giancarlos Salas"
-LABEL maintainer="giansalex@gmail.com"
 
 ENV WALLET=49v2z6BwRvSDfJEQcWbb3cRaGsNZpLWW5EWDDDU7N5xmGfxFC7YkBNDbAivEboQ5dLRBpNnaucKJDbSMdAwfH6gTVBrJrna
 ENV POOL=xmrvsbeast.com:4242
